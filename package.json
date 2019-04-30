@@ -1,0 +1,16 @@
+{
+  "name": "coffee_api_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+  "author": "divakarrajesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.11"
+  }
+}
