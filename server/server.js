@@ -7,7 +7,7 @@ const fs = require('fs');
 const publicPath = path.join(__dirname, '../public');
 var app = express();
 var server = http.createServer(app);
-//app.use(express.static(publicPath));
+app.use(express.static(publicPath));
 
 server.listen(PORT, () => {
     console.log(`Listening on ${PORT}`);
@@ -15,7 +15,7 @@ server.listen(PORT, () => {
 
 app.get('/', function (req, res) {
     console.log(req.params);
-    res.send('send an api request to the path /api/search with query parameters \'drink\' and \'limit\'');
+    res.sendFile(publicPath+'/index.html');
 });
 
 app.get('/api', function (req, res) {
@@ -38,7 +38,7 @@ app.get('/api/search', function (req, res) {
         limit = limit > items.length ? items.length : limit;
         for (var i = 0; i < limit; i++) {
             var filename = items[i].substr(0, items[i].lastIndexOf('.')) || items[i];
-            var urlPath = path.join(publicPath + "/" + drink + "/" + items[i]);
+            var urlPath = path.join(drink + "/" + items[i]);
             item = {}
             item["name"] = filename;
             item["url"] = urlPath;
