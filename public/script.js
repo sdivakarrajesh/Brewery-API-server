@@ -18,6 +18,7 @@ drinktype.forEach(element => {
     cellContent+="<code><strong>"+element+"</strong></code><br><br>"
     console.log(element);
 });
+cellContent+="<br>You can also chain multiple drink types using & operator"
 cell12.innerHTML = cellContent;
 
 var row2 = table.insertRow(-1);
