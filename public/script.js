@@ -24,4 +24,4 @@ var row2 = table.insertRow(-1);
 var cell21 = row2.insertCell(0);
 var cell22 = row2.insertCell(1);
 cell21.innerHTML = "limit"
-cell22.innerHTML = "a numerical value describing the number of results to be returned. Defaults to 10"
+cell22.innerHTML = "a numerical value describing the number of results to be returned. Defaults to 10. If limit = 0, it returns all drinks in that category"

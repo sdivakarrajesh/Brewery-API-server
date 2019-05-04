@@ -28,12 +28,15 @@ app.get('/api/search', function (req, res) {
     drink = req.query.drink
     if (drink == "" || drink == null || drink == {}) res.send("invalid drink type")
     limit = req.query.limit
-    if (limit == null || limit == 0) limit = 10;
+    
 
 
     jsonObj = [];
 
     fs.readdir(path.join(publicPath + "/" + drink), function (err, items) {
+        
+        if (limit == null) limit = 10;
+        else if(limit==0) limit=items.length;
         
         limit = limit > items.length ? items.length : limit;
         for (var i = 0; i < limit; i++) {
