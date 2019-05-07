@@ -25,7 +25,7 @@ The App should live on localhost:5000/
 - Setup the login credentials to you account using the instructions available [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 - If everything went right you might be able to push the changes to your heroku account using,
 ```
-heroku push
+git push heroku
 ```
 
 or 
