@@ -23,6 +23,7 @@ async function getDrinks(drinks, limit) {
             item = {}
             item["name"] = filename
             item["url"] = urlPath
+            item["type"] = drink
             jsonObj.push(item)
             console.log("adding ", items[i])
         }
